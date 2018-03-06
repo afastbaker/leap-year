@@ -8,20 +8,14 @@ var leapYear = function(year) {
   }
 };
 
-//party logic
+//ui
+console.log("I am loading.")
 $(document).ready(function() {
   $("form#leap-year").submit(function(event) {
     event.preventDefault();
-
+    debugger;
     var year = parseInt($("input#year").val());
-    var result = leapYear(year);
-
-    $(".year").text(year);
-
-    if (!result) {
-      $(".not").text("not");
-    }
-
-    $("#result").show();
+    var answer = leapYear(year);
+    $("#result").text(answer).show();
   });
 });
